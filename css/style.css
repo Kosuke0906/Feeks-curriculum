@@ -254,3 +254,18 @@ section {
 .lang_desc h1 {
   text-align: left;
 }
+/* ここからfooter */
+
+footer{
+    background-color: white;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 90%;
+    height: 100px;
+margin: 0 auto;
+}
