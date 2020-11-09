@@ -183,7 +183,7 @@ section {
 /* ここから、学べる言語のセクション */
 .contents {
   width: 90%;
-  margin: 100px auto;
+  margin: 70px auto 100px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -191,7 +191,7 @@ section {
 .contents img {
   display: block;
   margin: 30px auto;
-  width: 30%;
+  width: 45%;
 }
 
 .item {
@@ -230,7 +230,7 @@ section {
   margin-bottom: 60px;
 }
 
-.lang h2 {
+.lang h1 {
   font-size: 36px;
 }
 
