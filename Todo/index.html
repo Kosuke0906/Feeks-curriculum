@@ -1,12 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <span>{{ `残タスク数:${remainTask}/${list.length}` }}</span><br />
+      <input type="text" v-model="addText" placeholder="ToDoを入力して" />
+      <button v-on:click="addToDo()">追加</button>
+      <button v-on:click="deleteBtn()">削除</button>
+      <hr />
+      <ul v-if="list.length">
+        <ul v-for="todo in list">
+          <li>
+            <span v-bind:class="{ done: todo.isChecked }">
+              <input
+                type="checkbox"
+                v-on:change="changeStatus"
+                v-model="todo.isChecked"
+              />{{ todo.text }}
+            </span>
+          </li>
+        </ul>
+      </ul>
+      <ul v-else>
+        　
+        <span>現在タスクはありません</span>
+      </ul>
+    </div>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <script src="main.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
